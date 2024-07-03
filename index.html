@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SUM OF TWO NUMBERS</title>
+    <style>
+      body{
+        background-color: #d8d3c7;
+      }
+      .head{
+        margin: 30px auto;
+        text-align: center;
+      }
+      
+      .container-num{
+        font-size: 25px ;
+        display: block;
+        justify-content: center;
+        text-align: center;
+        color: #45474a;
+      }
+      #num1{
+    height: 45px;
+    width: 300px;
+    border-radius: 10px;
+    border-style:solid;
+    
+}
+#num2{
+    height: 45px;
+    width: 300px;
+    border-radius: 10px;
+    border-style:solid;
+}
+#answer{
+    text-align: center;
+    color:black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+}   
+    .container{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      
+    }
+     .container .btn {
+    background-color:  #a29b93;
+    color: black;
+    font-size: 15px;
+    padding: 15px 25px;
+    cursor: pointer;
+    border-radius: 2px;
+    text-align: center;
+    display: inline-block;
+    text-align: center;
+    margin: 60px 60px;
+    width:300px;
+  }
+
+      
+    </style>
+  </head>
+
+  <body>
+    <h1 class="head">SUM OF NUMBERS <hr></h1>
+    <div class="container-num">
+      <p >Enter Number 1 : </p><br />
+    <input type="text" id="num1" /><br /><br />
+
+   <p > Enter Number 2 :</p> <br />
+    <input type="text" id="num2" />
+  </div>
+    <br />
+    <br />
+
+    <p id="answer">Answer:</p>
+    <div class="container">
+    <button class="btn" type="button" onclick="calculateSum()">Calculate Sum</button>&nbsp;&nbsp;
+    <button  class="btn" type="button" onclick="resetSum()">Reset Sum</button>
+  </div>
+    <script>
+      const inputBox1 = document.getElementById("num1");
+      const inputBox2 = document.getElementById("num2");
+      const answertText = document.getElementById("answer");
+
+      function calculateSum() {
+        const val1 = parseInt(inputBox1.value);
+        const val2 = parseInt(inputBox1.value);
+        const sum = val1 + val2;
+        answertText.innerText = `Answer : ${sum}`;
+      }
+
+      function resetSum() {
+        inputBox1.value = " ";
+        inputBox2.value = " ";
+        answertText.innerText = `Answer :`;
+      }
+    </script>
+  </body>
+</html>
